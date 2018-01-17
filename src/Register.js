@@ -154,7 +154,7 @@ class Register extends React.Component {
                                 name='firstname'
                                 validations={[
                                     ruleValidator.required
-                                ]} /> />
+                                ]} />
                         </div>
                         <div className='form-group'>
                             <input
@@ -165,7 +165,7 @@ class Register extends React.Component {
                                 name='lastname'
                                 validations={[
                                     ruleValidator.required
-                                ]} /> />
+                                ]} />
                         </div>
                         <Button
                             type="submit"
