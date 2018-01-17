@@ -13,9 +13,6 @@ const loggedIn = false;
 ReactDOM.render((
     <Router>
         <Switch>
-            {/* <Route exact path="/" render={() =>
-                (loggedIn ? (<Redirect to="/login" />) : (<Redirect to="/register" />)
-            )} /> */}
             <Route exact path='/login' component={Login} />
             <Route exact path='/register' component={Register} />
         </Switch>
