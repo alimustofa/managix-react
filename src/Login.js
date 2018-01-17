@@ -4,8 +4,9 @@ import axios from 'axios';
 import classNames from 'classnames';
 import style from '../public/css/style.css';
 import img from '../public/img/managix-logo.png';
+import url from './constants/url';
 
-class App extends React.Component {
+class Login extends React.Component {
     constructor() {
         super();
 
@@ -28,7 +29,7 @@ class App extends React.Component {
         const config = {
             headers: {
                 'Content-Type': 'multipart/form-data',
-                'X-Api-Key': '22fbf8e3-d7ad-478f-92e5-a3f769eece00',
+                'X-Api-Key': url.PROD.API_KEY,
             },
         };
 
@@ -36,7 +37,7 @@ class App extends React.Component {
         data.append('username', username);
         data.append('password', password);
 
-        return await axios.post('https://api.managix.id/auth', data, config);
+        return await axios.post(`${url.PROD.URL}/auth`, data, config);
     }
 
     handleChange(e) {
@@ -147,4 +148,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default Login;

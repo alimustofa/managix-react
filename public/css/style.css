@@ -37,9 +37,15 @@
 }
 
 .login-btn:hover {
-	color: white !important;    
-	color: #fff;
+	color: white !important;
     background-color: #377ab7;
+}
+
+.login-btn:disabled {
+	color: white !important;
+    background-color:#ccc;
+	border-color:#ccc;
+	cursor:not-allowed;
 }
 
 .input {
@@ -54,4 +60,8 @@
 .link-toggle {
 	color: rgb(32, 80, 129);
     cursor: pointer;
+}
+
+.capitalize {
+	text-transform: capitalize;
 }
